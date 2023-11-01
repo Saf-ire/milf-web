@@ -1,0 +1,21 @@
+<figure class="figure">
+  <ng-container>
+    <canvas
+      baseChart
+      class="chart"
+      [data]="doughnutChartData"
+      [type]="'doughnut'"
+      [options]="doughnutChartOptions"
+    ></canvas>
+  </ng-container>
+  {{ percentage }}
+  <input
+    type="number"
+    [(ngModel)]="percentage"
+    (ngModelChange)="onChartChange()"
+  />
+  <ng-template #noValue> No Value </ng-template>
+</figure>
+<figcaption class="figCaption mt-1 text-center">
+  <!-- <p class="__text">{{ label }}</p> -->
+</figcaption>
